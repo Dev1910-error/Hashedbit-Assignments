@@ -1,0 +1,149 @@
+const states = ["Andhra Pradesh", "Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal"
+];
+
+// Filter out states starting with a vowel
+const filteredStates = states.filter(state => {
+  const firstChar = state.charAt(0).toLowerCase();
+  return !['a', 'e', 'i', 'o', 'u'].includes(firstChar);
+});
+
+console.log(filteredStates);
+
+// code 2 //
+let str = 'I love my India';
+
+let reversed = str.split(' ').reverse().join(' ');
+
+console.log(reversed); // Output: 'India my love I'
+
+
+// code 3 //
+let string = 'INDIA';
+
+let arr = string.split('');
+
+arr.splice(3, 0, 'O', 'N', 'E', 'S');
+
+let result = arr.join('');
+
+console.log(result);
+
+
+// code 4 //
+let str = "JavaScript is a powerful language";
+
+let vowels = "aeiouAEIOU";
+let vowelCount = 0, consonantCount = 0;
+
+for (let char of str) {
+  if (/[a-zA-Z]/.test(char)) {
+    if (vowels.includes(char)) vowelCount++;
+    else consonantCount++;
+  }
+}
+
+console.log("Vowels:", vowelCount);
+console.log("Consonants:", consonantCount);
+
+
+// code 5 //
+function correctfn(string, wrong, correct) {
+  return string.replace(wrong, correct);
+}
+
+console.log(correctfn("I love Mamba", "Mamba", "Mango"));  // Output: I love Mango
+
+
+// code 6 //
+const inputArr = [1, 2, 3, 9, 10, 7, 5, 4, 3];
+const answer = inputArr.filter(num => num > 5);
+console.log(answer); // [9, 10, 7]
+
+
+// code 7 //
+const students = [
+  { name: "Ram", scores: [80, 70, 60] },
+  { name: "Mohan", scores: [80, 70, 90] },
+  { name: "Sai", scores: [60, 70, 80] },
+  { name: "Hemang", scores: [90, 90, 80, 80] },
+];
+
+const output = students.map(student => {
+  const avg = student.scores.reduce((a, b) => a + b, 0) / student.scores.length;
+  return { name: student.name, average: avg };
+});
+
+console.log(output);
+
+
+// code 8 //
+function digitalRoot(num) {
+  while (num >= 10) {
+    num = num.toString().split('').reduce((a, b) => a + Number(b), 0);
+  }
+  return num;
+}
+
+console.log(digitalRoot(456)); // 6 → (4+5+6 = 15 → 1+5 = 6)
+
+
+// code 9 //
+function countWords(paragraph) {
+  return paragraph.trim().split(/\s+/).length;
+}
+
+console.log(countWords("JavaScript is easy to learn.")); // Output: 5
+
+
+// code 10 //
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+
+console.log(reverseString("Hello")); // Output: olleH
+
+
+// code 11 //
+const students = [
+  {
+    name: "student1",
+    subjects: {
+      subject1: 44,
+      subject2: 56,
+      subject3: 87,
+      subject4: 97,
+      subject5: 37
+    }
+  },
+  {
+    name: "student2",
+    subjects: {
+      subject1: 44,
+      subject2: 56,
+      subject3: 87,
+      subject4: 97,
+      subject5: 37
+    }
+  },
+  {
+    name: "student3",
+    subjects: {
+      subject1: 44,
+      subject2: 56,
+      subject3: 87,
+      subject4: 97,
+      subject5: 37
+    }
+  }
+];
+
+const result = students.map(student => {
+  const scores = Object.values(student.subjects);
+  const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
+  return {
+    name: student.name,
+    average: avg
+  };
+});
+
+console.log(result);
