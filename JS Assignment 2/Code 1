@@ -1,0 +1,87 @@
+// 1st code //
+for (let i = 1; i <= 100; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
+
+
+// 2nd code //
+function calculate(num1, num2, operator) {
+  let result;
+
+  switch (operator) {
+    case '+':
+      result = num1 + num2;
+      br //eak;
+
+    case '-':
+      result = num1 - num2;
+      break;
+
+    case '*':
+      result = num1 * num2;
+      break;
+
+    case '/':
+      if (num2 !== 0) {
+        result = num1 / num2;
+      } else {
+        result = "Error: Division by zero";
+      }
+      break;
+
+    default:
+      result = "Invalid operator";
+  }
+
+  return result;
+}
+
+
+// 3rd code //
+function findTax(salary) {
+  let tax = 0;
+
+  switch (true) {
+    case (salary > 0 && salary <= 500000):
+      tax = 0;
+      break;
+
+    case (salary > 500000 && salary <= 1000000):
+      tax = salary * 0.10;
+      break;
+
+    case (salary > 1000000 && salary <= 1500000):
+      tax = salary * 0.20;
+      break;
+
+    case (salary > 1500000):
+      tax = salary * 0.30;
+      break;
+
+    default:
+      tax = "Invalid salary input";
+  }
+
+  return tax;
+}
+
+
+// 4th code //
+function digitProductSum(n1, n2) {
+  let sum = 0;
+
+  while (n1 > 0 || n2 > 0) {
+    let digit1 = n1 % 10;
+    let digit2 = n2 % 10;
+
+    sum += digit1 * digit2;
+
+    n1 = Math.floor(n1 / 10);
+    n2 = Math.floor(n2 / 10);
+  }
+
+  return sum;
+}
+
