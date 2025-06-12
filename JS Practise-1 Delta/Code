@@ -1,0 +1,83 @@
+// code 1 //
+function scopeExample() {
+  var a = 1;      // function-scoped
+  let b = 2;      // block-scoped
+  const c = 3;    // block-scoped and cannot be reassigned
+
+  if (true) {
+    var a = 10; // same 'a' (function-scoped)
+    let b = 20; // new 'b' in block scope
+    const c = 30; // new 'c' in block scope
+    console.log("Inside block:", a, b, c);
+  }
+
+  console.log("Outside block:", a, b, c);
+}
+
+
+// code 2 //
+const fruits = ["Apple", "Banana", "Cherry", "Mango", "Pineapple"];
+
+function getSecondFruit() {
+  return fruits[1]; // index 1 is the second element
+}
+
+
+// code 3 //
+function pushAndPop(arr) {
+  arr.push("New Element");   // Add to end
+  arr.pop();                 // Remove last
+  return arr;
+}
+
+
+// code 4 //
+const numbers = [1, 2, 3, 4, 5];
+
+function squareNumbers(arr) {
+  return arr.map(num => num * num);
+}
+
+
+// code 5//
+function filterOddNumbers(arr) {
+  return arr.filter(num => num % 2 !== 0);
+}
+
+
+// code 6 //
+const person = {
+  name: "Tejasv",
+  age: 24,
+  occupation: "Developer"
+};
+
+function greetPerson(obj) {
+  console.log(`Hello, my name is ${obj.name}. I am a ${obj.occupation} aged ${obj.age}.`);
+}
+
+
+// code 7 //
+function getRectangleArea(rect) {
+  return rect.width * rect.height;
+}
+
+
+// code 8 //
+function getObjectKeys(obj) {
+  return Object.keys(obj);
+}
+
+
+// code 9 //
+function mergeObjects(obj1, obj2) {
+  return Object.assign({}, obj1, obj2);
+}
+
+
+// code 10 //
+const nums = [10, 20, 30, 40];
+
+function sumArray(arr) {
+  return arr.reduce((sum, num) => sum + num, 0);
+}
