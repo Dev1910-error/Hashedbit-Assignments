@@ -1,0 +1,31 @@
+{
+  "name": "movie-booking-app",
+  "version": "1.0.0",
+  "description": "A movie booking application built with React and TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "@types/react-router-dom": "^5.1.7"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "movie",
+    "booking"
+  ],
+  "author": "",
+  "license": "ISC"
+}
